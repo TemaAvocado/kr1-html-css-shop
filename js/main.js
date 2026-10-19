@@ -25,7 +25,7 @@ orderButtons.forEach((button) => {
 });
 
 // Закрываем модальное окно по кнопке «Закрыть».
-closeDialogButton.addEventListener('click', () => {
+closeDialogButton?.addEventListener('click', () => {
   orderDialog.close();
 });
 
@@ -69,9 +69,14 @@ orderForm.addEventListener('submit', (event) => {
   // Очищаем форму.
   orderForm.reset();
 
-  // Закрываем модальное окно.
-  orderDialog.close();
+  // Закрываем модальное окно, если форма находится в нём.
+  orderDialog?.close();
 });
 
+// Подставляем товар из ссылки вида order.html?product=product-1.
+const productSelect = document.getElementById('order-product');
+const productFromUrl = new URLSearchParams(window.location.search).get('product');
 
-
+if (productSelect && productFromUrl) {
+  productSelect.value = productFromUrl;
+}
