@@ -673,3 +673,46 @@ section h2 {
   margin: 0;
   padding: 0 var(--space-md) var(--space-md);
 }
+
+.faq__more {
+  margin: var(--space-md) 0 0;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about__text p {
+  margin: 0 0 var(--space-md);
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-accent);
+}
+
+.about__value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.about__label {
+  color: var(--color-muted);
+}
